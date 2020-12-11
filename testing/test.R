@@ -2,11 +2,9 @@ rm(list=ls(all.names=TRUE))
 
 #set the directory where the file is saved as the working directory
 if (!require("rstudioapi")) install.packages("rstudioapi")
-thisdir<-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-thisdir<-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
-diroutput <- paste0(thisdir,"/g_output/")
-dirinput <- paste0(thisdir,"/i_input/")
+diroutput <- "./testing/g_output/"
+dirinput <- "./testing/i_input/"
 
 
 suppressWarnings( if (file.exists(diroutput)){
