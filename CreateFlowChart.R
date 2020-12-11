@@ -10,6 +10,7 @@
 #' @param strata (optional) categorical variable representing strata
 #' @param flowchartname: filename (possibly with path) of the output dataset containing the flowchart
 
+
 CreateFlowChart<-function(dataset,listcriteria,weight,strata,flowchartname) {
   if (!require("data.table")) install.packages("data.table")
     library(data.table)
