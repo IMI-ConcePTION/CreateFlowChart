@@ -12,13 +12,11 @@ suppressWarnings( if (file.exists(diroutput)){
   dir.create(file.path( diroutput))
 })
 
-if (!require("data.table")) install.packages("data.table")
 library(data.table)
 if (!require("lubridate")) install.packages("lubridate")
 library(lubridate)
 
-source("CreateFlowChart.R")
-
+library(CreateFlowChart)
 
 dirtemp <- dirinput
 
@@ -34,7 +32,7 @@ load(paste0(dirtemp,"D3_exclusion_observed_time_no_overlap.RData"))
 load(paste0(dirtemp,"D3_inclusion_from_PERSONS.RData"))
 
 
-#MERGE THE DATASET PERSONS AND OBSERVATION_PERIODS TO HAVE INFORMATION ON AGE SEX AND LOOKBACK IN THE SAME 
+#MERGE THE DATASET PERSONS AND OBSERVATION_PERIODS TO HAVE INFORMATION ON AGE SEX AND LOOKBACK IN THE SAME
 PERSONS_OP <- merge(D3_inclusion_from_PERSONS,
                     D3_exclusion_no_op_start_date,
                     by="person_id",
