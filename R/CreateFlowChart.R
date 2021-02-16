@@ -47,6 +47,3 @@ CreateFlowChart<-function(dataset,listcriteria,weight,strata,flowchartname) {
   return(dataset)
 
 }
-
-
-
