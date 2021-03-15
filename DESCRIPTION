@@ -1,4 +1,4 @@
-Package: FlowChart
+Package: CreateFlowChart
 Type: Package
 Title: Create a flowchart
 Version: 0.1.0
